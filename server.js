@@ -34,4 +34,6 @@ app.get('/', (req, res) => {
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`🌟 Lumi Backend démarré sur le port ${PORT}`);
+  console.log(`🔑 API Key présente: ${!!process.env.ANTHROPIC_API_KEY}`);
+  console.log(`🔑 Début de la clé: ${process.env.ANTHROPIC_API_KEY ? process.env.ANTHROPIC_API_KEY.substring(0, 10) : 'NON DÉFINIE'}`);
 });
